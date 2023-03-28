@@ -17,3 +17,11 @@ public partial class MyClass
     [JSImport("window.location.href", "main.js")]
     internal static partial string GetHRef();
 }
+
+
+// TO run
+
+// dotnet run
+
+// dotnet tool update dotnet-serve --global
+// dotnet serve --directory bin\Debug\net7.0\browser-wasm\AppBundle
