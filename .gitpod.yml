@@ -47,7 +47,9 @@ tasks:
     command: |
       sudo dotnet workload install wasm-tools
       sudo dotnet workload install wasm-experimental
-      sudo dotnet new wasmbrowser
+# sudo dotnet new wasmbrowser
+# dotnet tool install -g dotnet-serve
+# dotnet serve -d:bin/$(Configuration)/net7.0/browser-wasm/AppBundle
 
 vscode:
   extensions:
