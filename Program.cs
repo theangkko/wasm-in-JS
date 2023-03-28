@@ -2,6 +2,7 @@ using System;
 using System.Runtime.InteropServices.JavaScript;
 
 Console.WriteLine("Hello, Browser!");
+Console.WriteLine(string.Join(" ", args));
 
 public partial class MyClass
 {
