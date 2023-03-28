@@ -20,8 +20,10 @@ public partial class MyClass
 
 
 // TO run
-
 // dotnet run
 
+// dotnet nuget enable source nuget.org
+
+// dotnet tool install dotnet-serve --global
 // dotnet tool update dotnet-serve --global
-// dotnet serve --directory bin\Debug\net7.0\browser-wasm\AppBundle
+// dotnet-serve --directory bin\Debug\net7.0\browser-wasm\AppBundle
