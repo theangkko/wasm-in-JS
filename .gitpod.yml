@@ -1,4 +1,4 @@
-image: gitpod/workspace-dotnet   
+# image: gitpod/workspace-dotnet   
 # image: gitpod/workspace-dotnet-vnc
 # port 6080, https://www.gitpod.io/docs/introduction/languages/dotnet
 
@@ -32,7 +32,7 @@ tasks:
       sudo dpkg -i packages-microsoft-prod.deb
       rm packages-microsoft-prod.deb
 
-      sudo apt-get update && \
+      sudo apt-get update
       sudo apt-get install -y dotnet-sdk-7.0
       
     command: |
