@@ -25,13 +25,6 @@ tasks:
       pyenv global 3.9.13 && pyenv local 3.9.13
 
 
-  - name: Terminal Dotnet Restore & Build
-    before: |
-      dotnet dev-certs https 
-      dotnet restore
-      dotnet build
-
-
   - name: WASM pre-requisite
     before : |
       declare repo_version=$(if command -v lsb_release &> /dev/null; then lsb_release -r -s; else grep -oP '(?<=^VERSION_ID=).+' /etc/os-release | tr -d '"'; fi)
@@ -43,6 +36,7 @@ tasks:
       sudo apt-get install -y dotnet-sdk-7.0
       
     command: |
+      dotnet restore
       sudo dotnet workload install wasm-tools
       sudo dotnet workload install wasm-experimental
 # sudo dotnet new wasmbrowser
